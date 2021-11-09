@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do
+  pkmn = Task.new(title: Faker::Games::Pokemon.name, text: Faker::Games::Pokemon.location)
+  pkmn.save
+end
+
+Task.find(1).delete

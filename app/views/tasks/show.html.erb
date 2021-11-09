@@ -1,0 +1,10 @@
+<h1><%= @task.title%></h1>
+<h3>You can find <%= @task.title%> at <%= @task.text %></h3>
+
+<input type="checkbox"> <span>Got it !</span> <span><%= link_to "🗑",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></span>
+
+<br><%= link_to("Edit", edit_task_path) %>
+<br><%= link_to("Go back", tasks_path) %>

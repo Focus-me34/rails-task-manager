@@ -1,0 +1,5 @@
+<h1>LIST OF POKEMON TO CATCH</h1>
+
+<% @tasks.each do |task| %>
+  <input type="checkbox"> <%= link_to(task.title, task_path(task)) %> <br>
+<% end %>
